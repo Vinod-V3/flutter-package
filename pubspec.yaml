@@ -1,5 +1,5 @@
 name: flutter_project_package
-description: "A new Flutter package project."
+description: "This package focusses on handling navigation, translations, local storage, data communication"
 version: 0.0.1
 homepage: "https://github.com/Vinod-V3/flutter-package"
 
