@@ -1,39 +1,50 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# flutter_project_package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A Flutter package that provides a unified abstraction for **navigation**, **internationalization (i18n)**, **local database storage**, and **data communication**.  
+Designed for teams building modular apps, shared libraries, or micro-frontend-style Flutter architectures.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### 1. Navigation Handler
+- Simple API to navigate between pages inside the host app or inside the package.
+- Supports named routes and argument passing.
+- Customizable route registry for package-level screens.
 
-## Getting started
+### 2. Translation (i18n)
+- Built-in integration with `flutter_localizations` and `intl`.
+- Loads translations from JSON files.
+- Exposes a lightweight translation service for package components.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### 3. Local Database Storage
+- Uses `sqflite` or `hive` (based on your configuration).
+- Unified API for CRUD operations.
+- Handles initialization, migrations, and key/value storage.
+
+### 4. Data Communication
+- Provides a simple event bus / callback bridge for sending data between:
+  - Host application ↔ Package screens  
+  - Package widgets ↔ Host widgets  
+- Supports synchronous and asynchronous communication.
+
+---
+
+## Installation
+
+Add the package to your project:
+
+```yaml
+dependencies:
+  flutter_project_package:
+    git:
+      url: https://github.com/Vinod-V3/flutter-package
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+    FlutterProjectPackage(
+        config: config
+    ),
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
